@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import PropTypes from 'prop-types'
+import reloj from "../../img/reloj.jpg";
 
 const Timer = (props) => {
     
@@ -19,9 +20,9 @@ const Timer = (props) => {
     });
 
     return(
-        <p>
-           seconds 
-        </p>
+        <div className="reloj d-flex align-items-center justify-content-center">
+          <img id="reloj" src={reloj}/> {seconds} 
+        </div>
     )
 
 }
