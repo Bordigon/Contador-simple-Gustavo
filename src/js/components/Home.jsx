@@ -3,6 +3,8 @@ import React from "react";
 //include images into your bundle
 import rigoImage from "../../img/rigo-baby.jpg";
 
+import Timer from "./Timer.jsx"
+
 //create your first component
 const Home = () => {
 	return (
@@ -13,13 +15,20 @@ const Home = () => {
 			<p>
 				<img src={rigoImage} />
 			</p>
-			<a href="#" className="btn btn-success">
-				If you see this green button... bootstrap is working...
-			</a>
+			<input placeholder="Tiempo en segundos" type="number"></input><br/>
+			<div className="mt-3">
+				<div id="1" className="btn btn-success">
+					boton verde
+				</div>
+				<div id="2" className="btn btn-primary mx-3">
+					boton verde
+				</div>
+				<div id="3" className="btn btn-warning">
+					boton verde
+				</div>
+			</div>
 			<p>
-				Made by{" "}
-				<a href="http://www.4geeksacademy.com">4Geeks Academy</a>, with
-				love!
+				<strong><Timer inicio="0000" direccion="true"/></strong>
 			</p>
 		</div>
 	);
