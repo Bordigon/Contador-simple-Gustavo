@@ -29,9 +29,17 @@ const Timer = (props) => {
         return() => clearInterval(timer);
     });
 
+    function digits(){
+        let secondsArray = seconds.toString();
+        let digits =[]
+        for(let t=0;t<(6-secondsArray.length);t++)
+            digits[t]=0;
+        return digits
+    }
+
     return(
         <div className="reloj d-flex align-items-center justify-content-center">
-          <img id="reloj" src={reloj}/><strong id="seconds">{seconds}</strong> 
+          <img id="reloj" src={reloj}/><strong id="seconds">{digits()}{seconds}</strong> 
         </div>
     )
 
